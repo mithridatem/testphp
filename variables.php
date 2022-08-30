@@ -1,12 +1,31 @@
 <?php
-    //fonction somme qui retourne un nombre entier (sans les virgules)
-    function somme($nbr1, $nbr2, $nbr3):int{
-        return $nbr1 + $nbr2 + $nbr3;
+    $tab = [5, 11, 8, 22, 36, 42, 3, 78, 1, 29];
+    //retourne la valeur minimale d'un tableau
+    function minValue($tableau){
+        $min = $tableau[0];
+        foreach($tableau as $value){
+            if($value<$min){
+                $min = $value;
+            }
+            else{
+                $min = $min;
+            }
+        }
+        return $min;
     }
-    function moyenne($nbr1, $nbr2, $nbr3):int{
-        return ($nbr1 + $nbr2 + $nbr3)/3;
+    //retourne la valeur maximale d'un tableau
+    function maxValue($tableau){
+        $max = 0;
+        foreach($tableau as $value){
+            if($value<$max){
+                $max = $value;
+            }
+            else{
+                $max = $max;
+            }
+        }
+        return $max;
     }
-    function moyenneV2($nbr1, $nbr2, $nbr3):int{
-        return somme($nbr1, $nbr2, $nbr3)/3;
-    }
+    echo 'La valeur minimale est : '.minValue($tab).'<br>';    
+    echo 'La valeur maximamle est : '.maxValue($tab).'<br>';    
 ?>
