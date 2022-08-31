@@ -18,7 +18,7 @@
     //test si le bouton à été cliqué
     if(isset($_GET['submit'])){
         //tester si les champs sont remplis
-        if(!empty($_GET['nom']) AND !empty($_GET['prenom'])){
+        if(!empty($_GET['nom']) AND $_GET['prenom'] !=""){
             echo '<p>Le compte '.$_GET['prenom'].' a été ajouté</p>';
         }
         else{
