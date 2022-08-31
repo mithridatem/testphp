@@ -26,6 +26,15 @@
         }
         return $max;
     }
-    echo 'La valeur minimale est : '.minValue($tab).'<br>';    
-    echo 'La valeur maximamle est : '.maxValue($tab).'<br>';    
+    function moyenneTab($tableau){
+        $somme = 0;
+        foreach ($tableau as $value) {
+            $somme += $value;
+        }
+        return $somme/count($tableau);
+    }
+    //echo 'La moyenne est égale à : '.moyenneTab($tab).'<br>';
+    echo moyenneTab($tab);
+    /* echo 'La valeur minimale est : '.minValue($tab).'<br>';    
+    echo 'La valeur maximamle est : '.maxValue($tab).'<br>';  */   
 ?>
