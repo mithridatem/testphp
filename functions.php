@@ -12,9 +12,16 @@
         }
     }
     function dateToFrench($dateUs):string{
+        //tableau qui contient les jours de la semaine
+        $tab =['Lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'Samedi', 'Dimanche'];
+        //instancier un objet DateTime
         $date = new DateTime($dateUs);
         return $tab[$date->format('N')-1].' '.$date->format('d-n-Y');
     }
-    //utiliser
-    //echo dateToFrench($_POST['date']);
+    //pour utiliser la fonction dateToFrench
+    //echo dateToFrench('2022-08-31'); ou
+    //echo dateToFrench($_POST['date']); ou
+    //echo dateToFrench($date);
+
+    
 ?>  
