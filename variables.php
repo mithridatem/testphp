@@ -17,7 +17,7 @@
     function maxValue($tableau){
         $max = 0;
         foreach($tableau as $value){
-            if($value<$max){
+            if($value>$max){
                 $max = $value;
             }
             else{
