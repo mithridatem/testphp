@@ -38,14 +38,15 @@
     //test bouton non cliqué
     else{
         $message = "Pour calculer le prix TTC cliquez sur calculer";
-    } 
+    }
+    echo $message; 
     //affichage des erreurs
     //exemple de passage de variable de php à js
     /*echo '<script>
         console.log("'.$message.'");
         document.querySelector("#result").textContent = "'.$message.'";   
     </script>';*/
-    
+
     //fonction calculer le prix TTC
     function ttc($hT,$quantite, $ttva){
         return $hT*$quantite*$ttva;
